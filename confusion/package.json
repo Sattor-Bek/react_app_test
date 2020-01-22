@@ -11,10 +11,5 @@
   "description": "this is a react app",
   "main": "index.js",
   "repository": "https://github.com/Sattor-Bek/react_app_test",
-  "author": "Satoru",
-    "scripts": {
-    "start": "yarn run lite",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lite": "lite-server"
-  }
+  "author": "Satoru"
 }

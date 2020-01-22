@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.21.1/libexec/bin/yarn.js start
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.21.1/libexec/bin/yarn.js run start
 
 PATH: 
   ./bin:./node_modules/.bin:/Users/Satoru/.rbenv/shims:/Users/Satoru/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  SyntaxError: /Users/Satoru/code/Sattor-Bek/Front-End_Web_Development_with_React/react_app_test/confusion/package.json: Unexpected token } in JSON at position 487
+  SyntaxError: /Users/Satoru/code/Sattor-Bek/Front-End_Web_Development_with_React/react_app_test/confusion/package.json: Unexpected token } in JSON at position 423
       at JSON.parse (<anonymous>)
       at /usr/local/Cellar/yarn/1.21.1/libexec/lib/cli.js:1625:59
       at Generator.next (<anonymous>)
@@ -37,9 +37,8 @@ npm manifest:
     "repository": "https://github.com/Sattor-Bek/react_app_test",
     "author": "Satoru",
       "scripts": {
-      "start": "yarn run lite",
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "lite": "lite-server"
+      "start": "node index.js",
+      "lint": "eslint"
     },
   }
 
