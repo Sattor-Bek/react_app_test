@@ -17,6 +17,8 @@ class App extends React.Component {
         <h1>{this.state.count} </h1>
         <button onClick={()=>{this.handleClick()}}> + </button>
 
+        <div className="loader" id="loader-1"></div>
+
       </div>
     );
   }
