@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { Navbar, NavbarBrand } from 'reactstrap' ;
 import './App.css';
+import Menu from './components/MenuComponent';
 
 class App extends React.Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class App extends React.Component {
               <NavbarBrand href="/" >Ristorante Con Fusion </NavbarBrand>
             </div>
           </Navbar>
+          <Menu/>
         </div>
         <h1>{this.state.count} </h1>
         <button onClick={()=>{this.handleClick()}}> + </button>
