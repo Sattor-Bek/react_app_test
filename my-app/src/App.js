@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import { Navbar } from 'reactstrap' ;
+import { Navbar, NavbarBrand } from 'reactstrap' ;
+import './App.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,6 +17,13 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <div className="App">
+          <Navbar dark color="primary">
+            <div className="container">
+              <NavbarBrand href="/" >Ristorante Con Fusion </NavbarBrand>
+            </div>
+          </Navbar>
+        </div>
         <h1>{this.state.count} </h1>
         <button onClick={()=>{this.handleClick()}}> + </button>
 
