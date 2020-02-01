@@ -25,6 +25,7 @@ class App extends React.Component {
             </div>
           </Navbar>
           <Menu/>
+
         </div>
         <h1>{this.state.count} </h1>
         <button onClick={()=>{this.handleClick()}}> + </button>
