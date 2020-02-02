@@ -3,35 +3,38 @@ import React, { Component } from 'react';
 class Hello extends Component {
   constructor (props) {
     super(props);
-      this.state = {
-      usstate: props.initState,
-      desc: 'user name'
+      this.state = {value: 'ユーザーネームを入力',
+      userNameIs: false
       };
-    this.onSubmit = this.onSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-  onSubmit(e){
-    e.preventDefault();
-    this.setState({ usstate: e.target.value});
-    console.log("onSubmit");
-    console.log(this.state.desc);
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    this.setState({userNameIs: true})
+    alert('あなたのユーザーネームは　' + this.state.value + ' です');
+    event.preventDefault();
   }
 
 
   render() {
-    if (this.state.desc === "user name") {
+    if (this.state.userNameIs === false) {
       return (
-        <form onSubmit={this.onSubmit}>
-          <input
-            value={this.state.desc}/>
-          <div>
-            <button type="submit">OK</button>
-          </div>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            <input type="text" value={this.state.value} onChange={this.handleChange} />
+          </label>
+          <input type="submit" value="Submit" />
         </form>
-      );} else {
-        return (
-        <h1>Hello, {this.state.usstate}</h1>
-        );
+      );
+    } else {
+      return (
+      <h1>  こんにちは、{this.state.value}さん</h1>
+      );
     }
   }
 }
