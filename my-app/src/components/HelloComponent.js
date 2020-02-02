@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {NavbarText} from 'reactstrap';
 
 class Hello extends Component {
   constructor (props) {
@@ -28,12 +29,12 @@ class Hello extends Component {
           <label>
             <input type="text" value={this.state.value} onChange={this.handleChange} />
           </label>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit"/>
         </form>
       );
     } else {
       return (
-      <h1>  こんにちは、{this.state.value}さん</h1>
+      <NavbarText>  こんにちは、{this.state.value}さん</NavbarText>
       );
     }
   }
