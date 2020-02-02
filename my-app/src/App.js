@@ -3,6 +3,7 @@ import './App.css';
 import { Navbar, NavbarBrand } from 'reactstrap' ;
 import './App.css';
 import Menu from './components/MenuComponent';
+import Hello from './components/HelloComponent';
 
 class App extends React.Component {
   constructor(props) {
@@ -22,10 +23,10 @@ class App extends React.Component {
           <Navbar dark color="primary">
             <div className="container">
               <NavbarBrand href="/" >Ristorante Con Fusion </NavbarBrand>
+            <Hello/>
             </div>
           </Navbar>
           <Menu/>
-
         </div>
         <h1>{this.state.count} </h1>
         <button onClick={()=>{this.handleClick()}}> + </button>
