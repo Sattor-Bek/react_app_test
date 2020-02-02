@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import {NavbarText} from 'reactstrap';
+import {Input, NavbarText, Button} from 'reactstrap';
 
 class Hello extends Component {
   constructor (props) {
     super(props);
-      this.state = {value: 'ユーザーネームを入力',
+      this.state = {value: '',
       userNameIs: false
       };
     this.handleChange = this.handleChange.bind(this);
@@ -27,9 +27,9 @@ class Hello extends Component {
       return (
         <form onSubmit={this.handleSubmit}>
           <label>
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
+            <Input type="text" value={this.state.value} onChange={this.handleChange} className="rounded shadow-sm" placeholder="ユーザーネームを入力"/>
           </label>
-          <input type="submit" value="Submit"/>
+           <Button color="secondary" type="submit" value="Submit" className="ml-2" >Submit</Button>{' '}
         </form>
       );
     } else {
