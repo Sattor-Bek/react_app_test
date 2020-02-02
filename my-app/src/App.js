@@ -22,8 +22,14 @@ class App extends React.Component {
         <div className="App">
           <Navbar dark color="primary">
             <div className="container">
-              <NavbarBrand href="/" >Ristorante Con Fusion </NavbarBrand>
-            <Hello/>
+              <div className="row">
+                <div className="col-8">
+                  <NavbarBrand href="/" >Ristorante Con Fusion </NavbarBrand>
+                </div>
+                <div className="col-8">
+                  <Hello/>
+                </div>
+              </div>
             </div>
           </Navbar>
           <Menu/>

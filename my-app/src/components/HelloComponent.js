@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Input, NavbarText, Button} from 'reactstrap';
+import {Form, Input, NavbarText, Button} from 'reactstrap';
 
 class Hello extends Component {
   constructor (props) {
@@ -25,12 +25,10 @@ class Hello extends Component {
   render() {
     if (this.state.userNameIs === false) {
       return (
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            <Input type="text" value={this.state.value} onChange={this.handleChange} className="rounded shadow-sm" placeholder="ユーザーネームを入力"/>
-          </label>
-           <Button color="secondary" type="submit" value="Submit" className="ml-2" >Submit</Button>{' '}
-        </form>
+        <Form onSubmit={this.handleSubmit} className="">
+          <Input type="text" value={this.state.value} onChange={this.handleChange} className="rounded" placeholder="ユーザーネームを入力"/>
+          <Button color="secondary" type="submit" value="Submit" className="" >Submit</Button>{' '}
+        </Form>
       );
     } else {
       return (
