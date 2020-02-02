@@ -25,9 +25,9 @@ class Hello extends Component {
   render() {
     if (this.state.userNameIs === false) {
       return (
-        <Form onSubmit={this.handleSubmit} className="">
+        <Form onSubmit={this.handleSubmit} className="d-flex">
           <Input type="text" value={this.state.value} onChange={this.handleChange} className="rounded" placeholder="ユーザーネームを入力"/>
-          <Button color="secondary" type="submit" value="Submit" className="" >Submit</Button>{' '}
+          <Button color="secondary" type="submit" value="Submit" className="ml-2" >Submit</Button>{' '}
         </Form>
       );
     } else {

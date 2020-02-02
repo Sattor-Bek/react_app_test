@@ -21,12 +21,12 @@ class App extends React.Component {
       <div>
         <div className="App">
           <Navbar dark color="primary">
-            <div className="container">
+            <div className="container d-inline-block">
               <div className="row">
                 <div className="col-8">
                   <NavbarBrand href="/" >Ristorante Con Fusion </NavbarBrand>
                 </div>
-                <div className="col-8">
+                <div className="col-4">
                   <Hello/>
                 </div>
               </div>
